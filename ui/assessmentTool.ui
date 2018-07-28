@@ -465,16 +465,6 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QGraphicsView" name="graphicsView">
-            <property name="geometry">
-             <rect>
-              <x>85</x>
-              <y>30</y>
-              <width>351</width>
-              <height>261</height>
-             </rect>
-            </property>
-           </widget>
           </widget>
          </item>
         </layout>
