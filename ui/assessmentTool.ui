@@ -57,7 +57,7 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="title">
         <property name="font">
          <font>
           <pointsize>18</pointsize>
@@ -88,7 +88,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="9,8">
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="9,9">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -114,14 +114,14 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QFrame" name="button_panel">
+          <widget class="QFrame" name="button_frame">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="import_button">
             <property name="geometry">
              <rect>
               <x>30</x>
@@ -146,7 +146,7 @@
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="check_button">
             <property name="geometry">
              <rect>
               <x>160</x>
@@ -159,7 +159,7 @@
              <string>检验比例</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="estimate_button">
             <property name="geometry">
              <rect>
               <x>290</x>
@@ -172,21 +172,43 @@
              <string>预估模型</string>
             </property>
            </widget>
-           <zorder>pushButton</zorder>
-           <zorder>pushButton_2</zorder>
-           <zorder>pushButton_3</zorder>
-           <zorder>tableWidget</zorder>
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="frame">
+          <widget class="QFrame" name="table_frame">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <zorder>right</zorder>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="leftMargin">
+             <number>30</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>20</number>
+            </property>
+            <property name="bottomMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="table_frame_1">
+              <property name="styleSheet">
+               <string notr="true">background-color:rgb(231, 196, 255)</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -203,7 +225,7 @@
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,3">
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="3,4">
          <property name="spacing">
           <number>0</number>
          </property>
@@ -211,14 +233,14 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QFrame" name="frame_2">
+          <widget class="QFrame" name="right_top">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="3,1">
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="4,1">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -226,7 +248,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QFrame" name="frame_4">
+             <widget class="QFrame" name="point_frame">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
@@ -247,7 +269,7 @@
                 <number>10</number>
                </property>
                <item>
-                <widget class="QTableWidget" name="tableWidget">
+                <widget class="QTableWidget" name="point_table">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -350,14 +372,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_5">
+             <widget class="QFrame" name="tps_frame">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QTableWidget" name="tableWidget_2">
+              <widget class="QTableWidget" name="max_tps">
                <property name="geometry">
                 <rect>
                  <x>41</x>
@@ -458,13 +480,40 @@
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="frame_3">
+          <widget class="QFrame" name="right_bottom">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="leftMargin">
+             <number>40</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>40</number>
+            </property>
+            <property name="bottomMargin">
+             <number>70</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="line_chart_frame">
+              <property name="styleSheet">
+               <string notr="true">background-color:rgb(240, 240, 240)</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -476,9 +525,9 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>pushButton_2</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>pushButton</tabstop>
+  <tabstop>check_button</tabstop>
+  <tabstop>estimate_button</tabstop>
+  <tabstop>import_button</tabstop>
  </tabstops>
  <resources/>
  <connections/>
