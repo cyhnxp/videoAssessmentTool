@@ -39,7 +39,7 @@ class Ui_main(QtGui.QFrame):
     def setupUi(self, main):
         main.setObjectName(_fromUtf8("main"))
         main.setWindowModality(QtCore.Qt.NonModal)
-        main.resize(1123, 820)
+        main.resize(1006, 738)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -160,8 +160,7 @@ class Ui_main(QtGui.QFrame):
         self.point_table.setVerticalScrollMode(QtGui.QAbstractItemView.ScrollPerPixel)
         self.point_table.setHorizontalScrollMode(QtGui.QAbstractItemView.ScrollPerPixel)
         self.point_table.setRowCount(2)
-        self.point_table.setColumnCount(5)
-        self.point_table.setObjectName(_fromUtf8("point_table"))
+        self.point_table.setColumnCount(10)
         item = QtGui.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter|QtCore.Qt.AlignCenter)
         font = QtGui.QFont()
@@ -184,9 +183,9 @@ class Ui_main(QtGui.QFrame):
         item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
         self.point_table.setItem(1, 2, item)
         self.point_table.horizontalHeader().setVisible(False)
-        self.point_table.horizontalHeader().setDefaultSectionSize(89)
+        self.point_table.horizontalHeader().setDefaultSectionSize(87)
         self.point_table.verticalHeader().setVisible(False)
-        self.point_table.verticalHeader().setDefaultSectionSize(49)
+        self.point_table.verticalHeader().setDefaultSectionSize(32)
         self.verticalLayout_5.addWidget(self.point_table)
         self.verticalLayout_4.addWidget(self.point_frame)
         self.tps_frame = QtGui.QFrame(self.right_top)
@@ -281,9 +280,9 @@ class Ui_main(QtGui.QFrame):
     def retranslateUi(self, main):
         main.setWindowTitle(_translate("main", "混合业务性能评估工具", None))
         self.title.setText(_translate("main", "混合业务性能评估工具", None))
-        self.import_button.setText(_translate("main", "导入比例", None))
+        self.import_button.setText(_translate("main", "导入混合模型", None))
         self.check_button.setText(_translate("main", "检验比例", None))
-        self.estimate_button.setText(_translate("main", "预估模型", None))
+        self.estimate_button.setText(_translate("main", "性能预估", None))
         __sortingEnabled = self.point_table.isSortingEnabled()
         self.point_table.setSortingEnabled(False)
         item = self.point_table.item(0, 0)
@@ -300,9 +299,9 @@ class Ui_main(QtGui.QFrame):
     def plot(self):
         ''' plot some random stuff '''
         # random data
-        data = [random.random()*100 for i in range(7)]
+        data = [random.random()*100 for i in range(10)]
 
-        group_labels = ['0', '50','100','150','200','250','300']
+        group_labels = ['0', '50','100','150','200','250','300','350','400','450']
         # create an axis
         ax = self.figure.add_subplot(111)
 
@@ -319,6 +318,8 @@ class Ui_main(QtGui.QFrame):
         ax.grid()
         self.canvas.draw()
 
+    def resizeEvent(self, *args, **kwargs):
+        pass
 
 
 if __name__ == '__main__':

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1123</width>
-    <height>820</height>
+    <width>1006</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -313,7 +313,7 @@
                   <bool>false</bool>
                  </attribute>
                  <attribute name="verticalHeaderDefaultSectionSize">
-                  <number>49</number>
+                  <number>40</number>
                  </attribute>
                  <row/>
                  <row/>
